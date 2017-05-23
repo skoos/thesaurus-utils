@@ -15,6 +15,6 @@ print(ent_details)
 
 print("add a fake md5 to entity")
 entity = "%%lu:01000061"
-md5 = 234252f232
+md5 = "234252f232"
 result = insert_image(entity, md5, action="add")
 print("result: ", result)

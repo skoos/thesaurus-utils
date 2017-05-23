@@ -44,7 +44,7 @@ def insert_image(entity, md5, action="add"):
 
 def get_entity_details(entity, nomenclature_id = None):
     dic = {"id" : entity}
-    if nomenclature:
+    if nomenclature_id:
         dic["nomenclature_id"] = nomenclature_id
     res = requests.post("https://octopus.heuritech.com/thesaurus/list_entities", 
                         data=json.dumps(dic), 
