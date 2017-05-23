@@ -1,2 +1,3 @@
 # thesaurus-utils
-Thesaurus Wrapper
+
+Python Wrapper for Thesaurus API

@@ -2,6 +2,10 @@ import json
 from thesaurus_wrapper import insert_image
 import os
 
+#
+# Untested 
+#
+
 # insert folder of images in cacher
 def cache_images(path_in, path_out, passwd):
     cmd = "docker run -it -v " + \
@@ -30,7 +34,7 @@ def read_and_insert(json_file, name_to_ent):
         path = l["image_path"]
         name = path.split("/")[2]
         ent = name_to_ent[name]
-        res = insert_image(ent, md5)
+        res = update_image(ent, md5)
         print("Sending: ", ent, md5, "response: ", res)
 
 # Execute whole script

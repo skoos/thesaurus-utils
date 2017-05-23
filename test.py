@@ -12,7 +12,7 @@ print(ent_name)
 print("add a fake md5 to entity")
 entity = "%%lu:01000061"
 md5 = "234252f232"
-result = insert_image(entity, md5, action="add")
+result = update_image(entity, md5, action="add")
 print("result: ", result)
 
 print("details for entity %%lu:01000061")
@@ -22,7 +22,7 @@ print(ent_details)
 print("remove the fake md5 to entity")
 entity = "%%lu:01000061"
 md5 = "234252f232"
-result = insert_image(entity, md5, action="remove")
+result = update_image(entity, md5, action="remove")
 print("result: ", result)
 
 print("details for entity %%lu:01000061")

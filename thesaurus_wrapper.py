@@ -15,7 +15,7 @@ def get_name(idname):
     res = requests.get(ROUTE_BASE + "get_name_from_id?id=" + idname)
     return res.json()
 
-def get_entity(name, nomenclature_id = None):
+def get_entity(name, nomenclature_id = None, depth = None):
     request = ROUTE_BASE + "get_id_from_name?name=" + name
     if nomenclature_id:
         request = request + "?nomenclature_id=" + nomenclature_id
@@ -35,7 +35,7 @@ def get_children_entities(entity):
     js = res.json()
     return get_entities_from_json(js)
 
-def insert_image(entity, md5, action="add"):
+def update_image(entity, md5, action="add"):
     dic = {"entity_id":entity, "images":[{"image_md5":md5, "type":"positive", "action":action}]}
     res = requests.post(ROUTE_BASE + "update_images", 
                         data=json.dumps(dic), 
